@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>layout responsivel</title>
+	<style>
+		* {box-sizing: border-box;}
+           body{
+           	margin: 0;
+            color: pink;
+            
+           }     
+
+           .cabecalho{
+           	padding: 16px;
+           	background-color: white;
+
+           }
+
+           /*** layout padrão para desktop ***/
+
+      
+          
+           .container{
+           	display: flex;
+           	max-width: 980px;
+           	margin: 1 auto;
+           	padding: 5px;
+           }
+           .esquerda{
+           	width: 400px;
+           	padding: 5px;
+           	background-color:color-mix(purple,black,orange);
+           }
+           .principal{
+           	width: 100%;
+           	padding: 5px;
+           	background-color:color-mix(purple,black,orange);
+            flex: 1px
+           }
+           .direita{
+           	width: 500px;
+           	padding: 5px;
+           	background-color:color-mix(purple,black,orange);
+           }
+             
+
+           /*** layout para tablets ****/
+
+           @media(max-width: 900px){
+           .container{
+              flex-wrap: wrap;
+           }
+           .esquerda{
+           	width: 300px;
+            flex: 1 1 150px;
+           }
+           .principal{
+           	 flex: 1 1 100%;
+           	 width: auto;
+           	 min-width: 400px;
+           }
+           .direita{
+           	width: 50%;
+           	flex: 1 1 50%;
+           }
+           }
+
+           /***layout para dispositivos moveis(celular)***/
+           @media (max-width: 600px){
+           .container{
+           	flex-direction: column;
+           }
+           .esquerda, .principal, .direita{
+            padding: 150px;
+           	width: 100%;
+           	flex: 0 1 auto;
+            min-width: 300px;
+           }
+           
+           .rodape{
+           	padding: 16px;
+           	background: skyblue;
+           	margin-top: 8px;
+           }
+
+           .h1{
+            border: 200px;
+            margin: auto;
+           }
+        }
+          body {
+  background-image: url('imagens/fundo.JPG');
+}
+
+
+</style>
+
+</head>
+<body>
+	<div class="cabecalho">
+		<tr>
+      <td width="150px"><img src="imagens/tabela_brasileirao.JPG"style="border: 1px solid black;"width="150px"> 
+      <td width="55px"><img src="imagens/corinthians.PNG" width="55px"></td>
+      <td width="50px"><img src="imagens/flamengo.PNG" width="50px"></td>
+      <td width="50px"><img src="imagens/palmeiras.webp" width="50px"></td>
+      <td width="50px"><img src="imagens/sao_paulo.webp" width="50px"></td>
+      <td width="40px"><img src="imagens/vasco.webp" width="40px"></td>
+      <td width="50px"><img src="imagens/cruseiro..svg" width="50px"></td>
+      <td width="45px"><img src="imagens/fluminense.webp" width="45px"></td>
+      <td width="45px"><img src="imagens/botafogo.webp" width="45px"></td>
+      <td width="50px"><img src="imagens/santos.PNG" width="50px"></td>
+      <td width="50px"><img src="imagens/inter.png" width="50px"></td>
+      <td width="45px"><img src="imagens/atletico.jpg" width="45px"></td>
+      <td width="50px"><img src="imagens/bahia.png" width="50px"></td>
+      <td width="50px"><img src="imagens/mirassol.jpg" width="50px"></td>
+      <td width="50px"><img src="imagens/gremio.png" width="50px"></td>
+      <td width="45px"><img src="imagens/pr.png" width="45px"></td>
+      <td width="50px"><img src="imagens/curitiba.webp" width="50px"></td>
+      <td width="50px"><img src="imagens/vitoria.png" width="50px"></td>
+      <td width="60px"><img src="imagens/bragantino.png" width="60px"></td>
+      <td width="55px"><img src="imagens/remo.webp" width="55px"></td>
+      <td width="60px"><img src="imagens/chape.png" width="60px"></td>
+    </tr>  
+	</div>
+
+	<div class="container">
+        <div class="esquerda">
+
+         <h1 align="center">Informação</h1>
+        	<tr>
+            <td width="450px"><img src="imagens/informação.PNG" width="450px"></td>
+         </tr>
+
+         </tr>
+        </div>
+        <div class="principal">
+       <h1 align="center">tabela do brasileirão</h1>
+          <tr>
+            <td width="600px"><img src="imagens/tabela_brasileirao_2026.PNG"style="height: 696px;" width="600px"></td>
+
+       
+
+        </div>
+        <div class="direita">
+        	<h1 align="center">líderes de gols do campeonato</h1>
+        <tr>
+           <td width="600px"><img src="imagens/lideres.PNG"style="height: 696px;" width="600px"></td>
+         </tr>
+        </tr>
+        </div>
+    </div>
+
+    
+
+
+</body>
+</html>
+
